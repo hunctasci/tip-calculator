@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body class="bg-teal-200">
+    <header class="flex justify-center m-7 text-5xl text-center">
+      <h1>SPLI<br />TTER</h1>
+    </header>
+    <div class="flex flex-col bg-neutral-100 rounded-3xl p-7">
+      <!-- Bill -->
+      <div>
+        <div class=" ">
+          <label for="total" class="mt-7">Bill</label>
+          <div class="mt-2 flex bg-neutral-200 p-2 rounded-3xl justify-between">
+            <p class="ml-2 text-xl font-bold">$</p>
+            <input
+              id="total"
+              type="number"
+              name="total"
+              class="bg-neutral-200 flex-grow focus:outline-none text-right"
+            />
+          </div>
+        </div>
+        <!-- Select tip -->
+        <div>
+          <h3 class="mt-7">Select Tip %</h3>
+          <div class="flex flex-wrap mt-2 space-y-2">
+            <button
+              value="5"
+              class="w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            >
+              5%</button
+            ><button
+              class="w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              value="10"
+            >
+              10%</button
+            ><button
+              class="w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              value="15"
+            >
+              15%</button
+            ><button
+              class="w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              value="25"
+            >
+              25%</button
+            ><button
+              class="w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              value="50"
+            >
+              50%
+            </button>
+          </div>
+
+          <!-- Number of People -->
+          <div>
+            <label for="people-count" class="mt-7">Number of People</label>
+            <div
+              class="my-4 flex bg-neutral-200 p-2 rounded-3xl justify-between"
+            >
+              <i class="ml-2 text-xl font-bold">#</i>
+              <input
+                id="people-count"
+                type="number"
+                name="people"
+                class="bg-neutral-200 flex-grow focus:outline-none text-right"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="bg-teal-200 rounded-3xl p-7">
+          <!-- tip amount -->
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-bold">Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <p id="tip">$0.00</p>
+          </div>
+          <!-- total -->
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-bold">Total</p>
+              <p>/ person</p>
+            </div>
+            <p id="person-total">$0.00</p>
+          </div>
+          <button
+            class="w-full mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          >
+            RESET
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
